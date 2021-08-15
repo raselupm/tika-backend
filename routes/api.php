@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api\VerificationController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', function () {
    return 'Changed this text';
 });
+
+Route::post('/verify', [VerificationController::class, 'verify']);
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
