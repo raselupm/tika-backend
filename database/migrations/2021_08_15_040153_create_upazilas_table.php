@@ -17,6 +17,7 @@ class CreateUpazilasTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('district_id');
+            $table->unsignedBigInteger('enabled')->default(1);
             $table->timestamps();
 
             $table->foreign('district_id')->references('id')->on('districts');
