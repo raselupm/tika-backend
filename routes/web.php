@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DivissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ use App\Http\Controllers\CategoryController;
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/categories', CategoryController::class);
+    Route::resource('/divisions', DivissionController::class);
+    Route::post('/divisions-enable-disable/{id}', [DivissionController::class, 'enableDisable'])->name('divisions-enable-disable');
 });
 
 require __DIR__.'/auth.php';
