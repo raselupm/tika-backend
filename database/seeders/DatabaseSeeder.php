@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\People;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
@@ -17,6 +18,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        People::factory(30)->create();
+
+
         $user = new User();
         $user->name = 'Rasel Ahmed';
         $user->email = 'demo@user.com';

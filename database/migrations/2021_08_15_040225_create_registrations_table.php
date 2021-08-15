@@ -22,6 +22,7 @@ class CreateRegistrationsTable extends Migration
             $table->unsignedBigInteger('center_id');
             $table->dateTime('upcoming_date');
             $table->dateTime('v1_date');
+            $table->dateTime('v2_date');
             $table->string('unique_id');
             $table->unsignedBigInteger('diabates');
             $table->timestamps();
