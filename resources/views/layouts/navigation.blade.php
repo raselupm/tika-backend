@@ -16,13 +16,28 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('divisions.index')" :active="request()->routeIs('divisions.index')">
-                        {{ __('Divisions') }}
-                    </x-nav-link>
-
                     <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
                         {{ __('Categories') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('divisions.index')" :active="request()->routeIs('divisions.index')">
+                        {{ __('Locations') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('people.index')" :active="request()->routeIs('people.index')">
+                        {{ __('People') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('vaccines.index')" :active="request()->routeIs('vaccines.index')">
+                        {{ __('Vaccines') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('vaccination-centers.index')" :active="request()->routeIs('vaccination-centers.index')">
+                        {{ __('Vaccination Centers') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('registrations.index')" :active="request()->routeIs('registrations.index')">
+                        {{ __('Registrations') }}
+                    </x-nav-link>
+
+
                 </div>
             </div>
 
