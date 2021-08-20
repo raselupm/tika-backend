@@ -21,8 +21,8 @@ class CreateRegistrationsTable extends Migration
             $table->string('phone_no');
             $table->unsignedBigInteger('center_id');
             $table->dateTime('upcoming_date');
-            $table->dateTime('v1_date');
-            $table->dateTime('v2_date');
+            $table->dateTime('v1_date')->nullable();
+            $table->dateTime('v2_date')->nullable();
             $table->string('unique_id');
             $table->unsignedBigInteger('diabates');
             $table->timestamps();
