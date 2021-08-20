@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\VerificationController;
+use App\Http\Controllers\Api\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::get('/test', function () {
 });
 
 Route::post('/verify', [VerificationController::class, 'verify']);
+Route::get('/categories', [CategoryController::class, 'index']);
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
